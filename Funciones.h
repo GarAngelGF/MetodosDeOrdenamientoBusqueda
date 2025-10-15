@@ -4,12 +4,12 @@
 
 void llenarArreglo(int arreglo[],int tamano);
 void mostrarArreglo(const int arreglo[], int tamano);
-void busquedaSecuencia(const int arreglo[], int tamano,int valor);
-void busquedaBinaria(const int arreglo[], int tamano);
-void ordenamientoBurbuja(const int arreglo[], int tamano);
-void ordenamientoSeleccion(const int arreglo[], int tamano);
-void ordenamientoInsersion(const int arreglo[], int tamano);
-
+double busquedaSecuencial(const int arreglo[], int tamano,int valor);
+double busquedaBinaria(const int arreglo[], int tamano, int valor);
+double ordenamientoBurbuja(const int arreglo[], int tamano);
+double ordenamientoSeleccion(const int arreglo[], int tamano);
+double ordenamientoInsercion(const int arreglo[], int tamano);
+void mostrarResultados( double tiempoSecuencial, double tiempoBinario,double tiempoBurbuja, double tiempoSeleccion, double tiempoInsercion,int tamano);
 
 
 #endif
