@@ -11,7 +11,7 @@ using namespace std;
 void llenarArreglo(int arreglo[], int tamano) {
     random_device rd;
     mt19937 gen(rd());
-    uniform_int_distribution<> distrib(1, 1000);
+    uniform_int_distribution<> distrib(1, 100);
     for (int i = 0; i < tamano; ++i) {
         *(arreglo + i) = distrib(gen);
     }
@@ -143,8 +143,8 @@ void mostrarResultados(
     cout << " Busqueda Secuencial  | " << fixed << setprecision(8) << tiempoSecuencial << endl;
     cout << " Busqueda Binaria     | " << fixed << setprecision(8) << tiempoBinario << endl;
     cout << "------------------------------------------" << endl;
-    cout << " Ordenamiento Burbuja | " << fixed << setprecision(8) << tiempoBurbuja << endl;
     cout << " Ordenamiento Seleccion| " << fixed << setprecision(8) << tiempoSeleccion << endl;
     cout << " Ordenamiento Insercion| " << fixed << setprecision(8) << tiempoInsercion << endl;
+    cout << " Ordenamiento Burbuja | " << fixed << setprecision(8) << tiempoBurbuja << endl;
     cout << "------------------------------------------" << endl;
 }

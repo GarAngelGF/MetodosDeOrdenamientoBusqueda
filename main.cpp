@@ -26,9 +26,10 @@ int main() {
     double tiempoBin = busquedaBinaria(miArreglo, tamano, valorABuscar);
 
     // --- Ejecutar Ordenamientos ---
-    double tiempoBur = ordenamientoBurbuja(miArreglo, tamano);
+
     double tiempoSel = ordenamientoSeleccion(miArreglo, tamano);
     double tiempoIns = ordenamientoInsercion(miArreglo, tamano);
+    double tiempoBur =0;
 
     // --- Mostrar Resumen Final ---
     mostrarResultados(tiempoSec, tiempoBin, tiempoBur, tiempoSel, tiempoIns, tamano);
