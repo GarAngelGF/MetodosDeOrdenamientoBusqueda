@@ -3,4 +3,6 @@ project(MetodosDeOrdenamientoBusqueda)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(MetodosDeOrdenamientoBusqueda main.cpp)
+add_executable(MetodosDeOrdenamientoBusqueda main.cpp
+        Funciones.cpp
+        Funciones.h)
