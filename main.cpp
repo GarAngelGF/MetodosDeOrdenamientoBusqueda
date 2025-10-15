@@ -29,7 +29,7 @@ int main() {
 
     double tiempoSel = ordenamientoSeleccion(miArreglo, tamano);
     double tiempoIns = ordenamientoInsercion(miArreglo, tamano);
-    double tiempoBur =0;
+    double tiempoBur = ordenamientoBurbuja(miArreglo, tamano);
 
     // --- Mostrar Resumen Final ---
     mostrarResultados(tiempoSec, tiempoBin, tiempoBur, tiempoSel, tiempoIns, tamano);
