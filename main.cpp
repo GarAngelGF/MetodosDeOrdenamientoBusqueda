@@ -10,7 +10,11 @@ int main() {
     cout << "Introduce el tamano del arreglo: ";
     cin >> tamano;
 
-    // Crear el arreglo
+    if (tamano <= 0) {
+        cout << "El tamano debe ser un numero positivo." << endl;
+        return 1;
+    }
+
     int* miArreglo = new int[tamano];
 
     llenarArreglo(miArreglo, tamano);
@@ -21,20 +25,15 @@ int main() {
     cout << "\nIntroduce el valor a buscar: ";
     cin >> valorABuscar;
 
-    // --- Ejecutar Búsquedas ---
     double tiempoSec = busquedaSecuencial(miArreglo, tamano, valorABuscar);
     double tiempoBin = busquedaBinaria(miArreglo, tamano, valorABuscar);
 
-    // --- Ejecutar Ordenamientos ---
+    ResultadosOrdenamiento resBur = ordenamientoBurbuja(miArreglo, tamano);
+    ResultadosOrdenamiento resSel = ordenamientoSeleccion(miArreglo, tamano);
+    ResultadosOrdenamiento resIns = ordenamientoInsercion(miArreglo, tamano);
 
-    double tiempoSel = ordenamientoSeleccion(miArreglo, tamano);
-    double tiempoIns = ordenamientoInsercion(miArreglo, tamano);
-    double tiempoBur = ordenamientoBurbuja(miArreglo, tamano);
+    mostrarResultados(tiempoSec, tiempoBin, resBur, resSel, resIns, tamano);
 
-    // --- Mostrar Resumen Final ---
-    mostrarResultados(tiempoSec, tiempoBin, tiempoBur, tiempoSel, tiempoIns, tamano);
-
-    // Liberar la memoria
     delete[] miArreglo;
 
     return 0;
